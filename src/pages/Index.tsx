@@ -68,7 +68,7 @@ const Index = () => {
 
   const handleStartAnalysis = async () => {
     if (!imageFile || !selectedImage) {
-      toast.error("Silakan upload foto terlebih dahulu.");
+      toast.error("Tidak ada gambar yang dipilih untuk dianalisis.");
       return;
     }
 
@@ -90,7 +90,7 @@ const Index = () => {
         // Perform real prediction using TensorFlow.js
         const results = await classifyImage(img);
         setPredictions(results);
-        toast.success(`Teridentifikasi sebagai: ${results[0].className}`);
+        toast.success(`Teridentifikasi sebagai: ${results[0].className} (${(results[0].probability * 100).toFixed(1)}%)`);
       } catch (error) {
         console.error("Prediction error:", error);
         toast.error(error instanceof Error ? error.message : "Terjadi kesalahan saat memprediksi gambar");
@@ -101,7 +101,7 @@ const Index = () => {
     };
 
     img.onerror = () => {
-      toast.error("Gagal memuat gambar");
+      toast.error("Gagal memuat gambar untuk analisis");
       setIsLoading(false);
     };
 
