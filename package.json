@@ -1,0 +1,7 @@
+{
+  "name": "berasku-root",
+  "private": true,
+  "scripts": {
+    "build": "cd fe && npm install && npm run build"
+  }
+}
