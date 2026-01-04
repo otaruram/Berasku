@@ -4,7 +4,6 @@
 
 Berasku is a modern web application that uses **TensorFlow.js** to detect rice varieties (Jasmine, Basmati, IR64, etc.) directly in the browser. No images are uploaded to a server—inference happens 100% on the client side, ensuring zero latency and complete data privacy.
 
-![Berasku Banner](./fe/public/1.png)
 
 ## ✨ Key Features
 
