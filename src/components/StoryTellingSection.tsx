@@ -31,7 +31,7 @@ const steps = [
 
 const StoryTellingSection = () => {
     return (
-        <section className="py-32 px-4 relative z-0">
+        <section className="py-24 px-4 relative z-0 bg-white">
             <div className="max-w-6xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {steps.map((step, index) => (
@@ -41,18 +41,18 @@ const StoryTellingSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
                             viewport={{ once: true, margin: "-100px" }}
-                            className={`relative p-8 rounded-3xl border ${step.border} ${step.bg} backdrop-blur-sm group hover:scale-[1.02] transition-transform duration-300`}
+                            className={`relative p-8 rounded-3xl border border-gray-200 bg-white shadow-lg group hover:scale-[1.02] transition-transform duration-300`}
                         >
-                            <div className={`p-4 rounded-2xl bg-slate-950 w-fit mb-6 border border-slate-800 group-hover:border-${step.color.split('-')[1]}-500/50 transition-colors`}>
-                                <step.icon className={`w-8 h-8 ${step.color}`} />
+                            <div className={`p-4 rounded-2xl bg-gray-50 w-fit mb-6 border border-gray-100 group-hover:border-black transition-colors`}>
+                                <step.icon className={`w-8 h-8 text-black`} />
                             </div>
 
-                            <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
-                            <p className="text-slate-400 leading-relaxed mb-6">
+                            <h3 className="text-2xl font-bold text-black mb-4">{step.title}</h3>
+                            <p className="text-gray-600 leading-relaxed mb-6">
                                 {step.description}
                             </p>
 
-                            <div className="flex items-center gap-2 text-sm font-medium text-slate-500 group-hover:text-white transition-colors">
+                            <div className="flex items-center gap-2 text-sm font-medium text-gray-500 group-hover:text-black transition-colors">
                                 Learn more <ArrowRight size={16} />
                             </div>
                         </motion.div>
@@ -64,14 +64,14 @@ const StoryTellingSection = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.6 }}
                     viewport={{ once: true }}
-                    className="mt-24 text-center border-t border-slate-800 pt-16"
+                    className="mt-24 text-center border-t border-gray-200 pt-16"
                 >
-                    <p className="text-slate-500 mb-6 font-mono text-sm uppercase tracking-widest">Powered By</p>
+                    <p className="text-gray-500 mb-6 font-mono text-sm uppercase tracking-widest">Powered By</p>
                     <div className="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
                         {/* Simple text placeholders for tech stack logos, ideally these would be svgs */}
-                        <span className="text-xl font-bold text-white flex items-center gap-2"><div className="w-2 h-2 bg-orange-500 rounded-full"></div>TensorFlow.js</span>
-                        <span className="text-xl font-bold text-white flex items-center gap-2"><div className="w-2 h-2 bg-cyan-400 rounded-full"></div>React</span>
-                        <span className="text-xl font-bold text-white flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Tailwind CSS</span>
+                        <span className="text-xl font-bold text-black flex items-center gap-2"><div className="w-2 h-2 bg-black rounded-full"></div>TensorFlow.js</span>
+                        <span className="text-xl font-bold text-black flex items-center gap-2"><div className="w-2 h-2 bg-black rounded-full"></div>React</span>
+                        <span className="text-xl font-bold text-black flex items-center gap-2"><div className="w-2 h-2 bg-black rounded-full"></div>Tailwind CSS</span>
                     </div>
                 </motion.div>
             </div>

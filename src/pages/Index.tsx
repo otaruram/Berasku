@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
+import StoryTellingSection from "@/components/StoryTellingSection";
+import Footer from "@/components/Footer";
 import { toast } from "sonner";
 import { classifyImage } from "@/utils/riceClassifier";
 import { useModelLoader } from "@/hooks/useModelLoader";
@@ -90,7 +92,7 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white selection:bg-blue-500/30 selection:text-blue-200">
+    <div className="min-h-screen bg-white text-black selection:bg-gray-200 selection:text-black">
       <HeroSection
         onImageSelect={handleImageSelect}
         isLoading={isLoading}
@@ -100,6 +102,8 @@ const Index = () => {
         isModelReady={isModelReady}
         onClear={handleClear}
       />
+      <StoryTellingSection />
+      <Footer />
 
 
     </div>
