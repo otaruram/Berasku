@@ -133,21 +133,29 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                                     )}
                                 </div>
 
-                                {!predictions.length && !isLoading && (
+                                {!predictions.length && (
                                     <div className="flex gap-4">
                                         <Button
                                             variant="outline"
                                             onClick={(e) => { e.stopPropagation(); onClear(); }}
                                             className="bg-white border-gray-200 hover:bg-gray-50 text-black"
+                                            disabled={isLoading}
                                         >
                                             Change Image
                                         </Button>
                                         <Button
                                             onClick={(e) => { e.stopPropagation(); startAnalysis(); }}
-                                            disabled={!isModelReady}
-                                            className="bg-black hover:bg-gray-800 text-white shadow-lg px-8"
+                                            disabled={!isModelReady || isLoading}
+                                            className="bg-black hover:bg-gray-800 text-white shadow-lg px-8 flex items-center gap-2"
                                         >
-                                            {!isModelReady ? "Loading Model..." : "Start Analysis"}
+                                            {isLoading ? (
+                                                <>
+                                                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                                    Analyzing...
+                                                </>
+                                            ) : (
+                                                !isModelReady ? "Loading Model..." : "Start Analysis"
+                                            )}
                                         </Button>
                                     </div>
                                 )}

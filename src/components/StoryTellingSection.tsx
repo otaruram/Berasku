@@ -59,21 +59,7 @@ const StoryTellingSection = () => {
                     ))}
                 </div>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.6 }}
-                    viewport={{ once: true }}
-                    className="mt-24 text-center border-t border-gray-200 pt-16"
-                >
-                    <p className="text-gray-500 mb-6 font-mono text-sm uppercase tracking-widest">Powered By</p>
-                    <div className="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                        {/* Simple text placeholders for tech stack logos, ideally these would be svgs */}
-                        <span className="text-xl font-bold text-black flex items-center gap-2"><div className="w-2 h-2 bg-black rounded-full"></div>TensorFlow.js</span>
-                        <span className="text-xl font-bold text-black flex items-center gap-2"><div className="w-2 h-2 bg-black rounded-full"></div>React</span>
-                        <span className="text-xl font-bold text-black flex items-center gap-2"><div className="w-2 h-2 bg-black rounded-full"></div>Tailwind CSS</span>
-                    </div>
-                </motion.div>
+
             </div>
         </section>
     );

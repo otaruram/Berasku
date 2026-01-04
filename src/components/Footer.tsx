@@ -14,15 +14,7 @@ const Footer = () => {
           >
             <Github className="w-5 h-5 text-gray-600 hover:text-black" />
           </a>
-          <a
-            href="https://www.linkedin.com/in/otaruram/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="w-5 h-5 text-gray-600 hover:text-black" />
-          </a>
+
         </div>
         <p className="text-sm text-gray-500 mb-1">
           Made with <span className="text-black">❤️</span> by <span className="font-semibold text-black">Berasku</span>
